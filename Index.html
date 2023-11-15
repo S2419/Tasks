@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Sample Table</title>
+  <link rel="stylesheet" href="Task.css">
+</head>
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Api name</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Earthquakes</td>
+          <td>
+            This API shows a list of earthquakes and ranks them in size of magnitude. Parameters for this:
+            north, south, east, west: coordinates of bounding box.
+          </td>
+          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=simban6')"></td>
+        </tr>
+        <tr>
+          <td>Streetname Lookup</td>
+          <td>Can search up the streetname anywhere in the world by querying it. Parameters are q (query term, url encoded) which is any location or word beginning.</td>
+          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/streetNameLookupJSON?q=Library&username=simban6')"></td>
+        </tr>
+        <tr>
+          <td>Country info</td>
+          <td>Gives you indepth informtion about a country from currency to what continent its on. The parameters for this are just the country/country code. </td>
+          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/countryInfoJSON?formatted=true&lang=it&country=ZW&username=simban6&style=full')"></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="result-box" id="resultBox">
+      <!-- Initially empty box to display results -->
+    </div>
+  </div>
+
+  <script src="Task.js"></script>
+</body>
+</html>

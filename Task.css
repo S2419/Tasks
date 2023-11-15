@@ -1,0 +1,80 @@
+/* CSS styles in Task.css */
+
+/* Resetting default margin and padding for better styling */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Centering the table */
+body {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  margin-top: 5px; /* 5px from the top */
+}
+
+/* Container for the table and results box */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Basic table styles */
+table {
+  width: 50%;
+  border-collapse: collapse;
+  border: 2px solid #000;
+  margin-bottom: 10px; /* 10px gap at the bottom */
+}
+
+/* Header cell styles, Body cell styles, Alternating row colors remain the same */
+
+/* Styling for the submit button */
+.submit-button {
+  background-color: #ccc;
+  color: #fff;
+  border: 1px solid #000;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s, box-shadow 0.3s;
+  border-radius: 4px;
+}
+
+/* Hover effect */
+.submit-button:hover {
+  background-color: #ff3333;
+  box-shadow: 0px 0px 5px 0px #ff99cc;
+}
+
+/* Styling for the result box */
+.result-box {
+  border: 2px solid #000;
+  padding: 20px;
+  width: 50%;
+  text-align: center;
+  margin-top: 10px; /* 10px gap between table and results box */
+}
+
+td, th {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left; /* Adjust text alignment as needed */
+}
+
+tr {
+  border-bottom: 1px solid black;
+}
+
+/* Borders for the first row (header) */
+tr:first-child {
+  border-top: 2px solid black; /* Make the header row slightly thicker */
+}
+This CSS code applies borders to both rows and columns of the table. It collapses the borders between cells and adds borders to each cell, row, and the first row (header) with different styles to distinguish them. Adjust the styles according to your preference.
+
+
+
+
+
