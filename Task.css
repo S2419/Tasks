@@ -1,12 +1,9 @@
-/* CSS styles in Task.css */
-
-/* Resetting default margin and padding for better styling */
 * {
   margin: 0;
   padding: 0;
 }
 
-/* Centering the table */
+
 body {
   display: flex;
   justify-content: center;
@@ -22,7 +19,6 @@ body {
   align-items: center;
 }
 
-/* Basic table styles */
 table {
   width: 50%;
   border-collapse: collapse;
@@ -30,9 +26,7 @@ table {
   margin-bottom: 10px; /* 10px gap at the bottom */
 }
 
-/* Header cell styles, Body cell styles, Alternating row colors remain the same */
 
-/* Styling for the submit button */
 .submit-button {
   background-color: #ccc;
   color: #fff;
@@ -61,18 +55,17 @@ table {
 td, th {
   border: 1px solid black;
   padding: 8px;
-  text-align: left; /* Adjust text alignment as needed */
+  text-align: left;
 }
 
 tr {
   border-bottom: 1px solid black;
 }
 
-/* Borders for the first row (header) */
 tr:first-child {
-  border-top: 2px solid black; /* Make the header row slightly thicker */
+  border-top: 2px solid black; 
 }
-This CSS code applies borders to both rows and columns of the table. It collapses the borders between cells and adds borders to each cell, row, and the first row (header) with different styles to distinguish them. Adjust the styles according to your preference.
+
 
 
 
