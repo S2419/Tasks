@@ -4,7 +4,7 @@
       const east = document.getElementById('eastInput').value;
       const west = document.getElementById('westInput').value;
 
-      const url = `http://api.geonames.org/earthquakesJSON?north=${north}&south=${south}&east=${east}&west=${west}&username=simban6`;
+      const url = `https://api.geonames.org/earthquakesJSON?north=${north}&south=${south}&east=${east}&west=${west}&username=simban6`;
 
       try {
         const response = await fetch(url);
@@ -20,7 +20,7 @@
     async function showStreetResults() {
       const streetName = document.getElementById('streetInput').value;
 
-      const url = `http://api.geonames.org/streetNameLookupJSON?q=${streetName}&username=simban6`;
+      const url = `https://api.geonames.org/streetNameLookupJSON?q=${streetName}&username=simban6`;
 
       try {
         const response = await fetch(url);
@@ -36,7 +36,7 @@
     async function showCountryResults() {
       const country = document.getElementById('countryInput').value;
 
-      const url = `http://api.geonames.org/countryInfoJSON?country=${country}&username=simban6`;
+      const url = `https://api.geonames.org/countryInfoJSON?country=${country}&username=simban6`;
 
       try {
         const response = await fetch(url);
