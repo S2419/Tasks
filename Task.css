@@ -9,10 +9,9 @@ body {
   justify-content: center;
   align-items: flex-start;
   height: 100vh;
-  margin-top: 5px; /* 5px from the top */
+  margin-top: 5px; 
 }
 
-/* Container for the table and results box */
 .container {
   display: flex;
   flex-direction: column;
@@ -23,7 +22,7 @@ table {
   width: 50%;
   border-collapse: collapse;
   border: 2px solid #000;
-  margin-bottom: 10px; /* 10px gap at the bottom */
+  margin-bottom: 10px; 
 }
 
 
@@ -43,13 +42,12 @@ table {
   box-shadow: 0px 0px 5px 0px #ff99cc;
 }
 
-/* Styling for the result box */
 .result-box {
   border: 2px solid #000;
   padding: 20px;
   width: 50%;
   text-align: center;
-  margin-top: 10px; /* 10px gap between table and results box */
+  margin-top: 10px; 
 }
 
 td, th {
