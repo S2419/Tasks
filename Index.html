@@ -12,7 +12,8 @@
         <tr>
           <th>Api name</th>
           <th>Description</th>
-          <th></th>
+          <th>Input</th>
+          <th></th> <!-- Blank column for spacing -->
         </tr>
       </thead>
       <tbody>
@@ -22,18 +23,41 @@
             This API shows a list of earthquakes and ranks them in size of magnitude. Parameters for this:
             north, south, east, west: coordinates of bounding box.
           </td>
-          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/earthquakesJSON?north=44.1&south=-9.9&east=-22.4&west=55.2&username=simban6')"></td>
+          <td>
+            <input type="text" placeholder="North" class="input-field" id="northInput">
+            <input type="text" placeholder="South" class="input-field" id="southInput">
+            <input type="text" placeholder="East" class="input-field" id="eastInput">
+            <input type="text" placeholder="West" class="input-field" id="westInput">
+          </td>
+          <td>
+            <input type="submit" value="Submit" class="submit-button" onclick="showEarthquakeResults()">
+          </td>
         </tr>
         <tr>
           <td>Streetname Lookup</td>
-          <td>Can search up the streetname anywhere in the world by querying it. Parameters are q (query term, url encoded) which is any location or word beginning.</td>
-          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/streetNameLookupJSON?q=Library&username=simban6')"></td>
+          <td>
+            Can search up the street name anywhere in the world by querying it. Parameters are q (query term, URL encoded) which is any location or word beginning.
+          </td>
+          <td>
+            <input type="text" placeholder="Enter street name" class="input-field" id="streetInput">
+          </td>
+          <td>
+            <input type="submit" value="Submit" class="submit-button" onclick="showStreetResults()">
+          </td>
         </tr>
         <tr>
           <td>Country info</td>
-          <td>Gives you indepth informtion about a country from currency to what continent its on. The parameters for this are just the country/country code. </td>
-          <td><input type="submit" value="Submit" class="submit-button" onclick="showResults('http://api.geonames.org/countryInfoJSON?formatted=true&lang=it&country=ZW&username=simban6&style=full')"></td>
+          <td>
+            Gives you in-depth information about a country from currency to what continent it's on. The parameters for this are just the country/country code.
+          </td>
+          <td>
+            <input type="text" placeholder="Enter country or country code" class="input-field" id="countryInput">
+          </td>
+          <td>
+            <input type="submit" value="Submit" class="submit-button" onclick="showCountryResults()">
+          </td>
         </tr>
+        <!-- Additional rows can follow the same structure -->
       </tbody>
     </table>
 
