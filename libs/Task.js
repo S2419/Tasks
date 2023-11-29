@@ -39,38 +39,36 @@ $(document).ready(function() {
         });
     });
  
- $('#btnRunStreetNames').click(function() {
-        $.ajax({
-            url: "libs/php/getStreetNames.php",
-            type: 'POST',
-            dataType: 'json',
-            data: {
-                query: $('#streetQuery').val()
-            },
-            success: function(result) {
-                console.log(result); 
-                
-                if (result.status.code === "200") {
-                    const streetData = result.data.streets;
-                    const container = $('#resultBox');
+$('#btnRunStreetNames').click(function() {
+    $.ajax({
+        url: "libs/php/getStreetnames.php",
+        type: 'POST',
+        dataType: 'json',
+        data: {
+            q: $('#streetInput').val()
+        },
+        success: function(result) {
+            console.log(JSON.stringify(result));
+            if (result.status.name === "ok") {
+                const streetNames = result.data.address;
+                const container = $('#resultBox');
 
-                    container.empty();
+                container.empty(); 
 
-                    streetData.forEach((street) => {
-                        const streetInfo = `<p>Street: ${street.name}, City: ${street.city}</p>`;
-                        container.append(streetInfo);
-                    });
-                } else {
-                    $('#resultBox').html("No street name data available");
-                }
-            },
-            error: function(jqXHR, textStatus, errorThrown) {
-                console.log("Error:", textStatus, errorThrown);
-                console.log(jqXHR.responseText);
-                $('#resultBox').html("Error fetching street names");
+               
+                streetNames.forEach((street) => {
+                    const streetInfo = `<p>Street: ${street.street}, Country Code: ${street.countryCode}</p>`;
+                    container.append(streetInfo);
+                });
             }
-        });
-    });
+        },
+        error: function(jqXHR, textStatus, errorThrown) {
+            console.log("Error:", textStatus, errorThrown);
+            console.log(jqXHR.responseText);
+            
+        }
+    }); 
+});
 
 
 
