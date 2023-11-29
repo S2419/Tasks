@@ -4,7 +4,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
   <title>Sample Table</title>
-  <link rel="stylesheet" href="Task.css">
+  <script src="libs/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="libs/Task.css">
 </head>
 <body>
   <div class="container">
@@ -21,17 +22,17 @@
         <tr>
           <td>Earthquakes</td>
           <td>
-            This API shows a list of earthquakes and ranks them in size of magnitude. Parameters for this:
-            north, south, east, west: coordinates of bounding box.
+            This API shows a list of earthquakes and ranks them in size of magnitude. Parameters :
+			north,south,east,west : coordinates of bounding box.
           </td>
           <td>
-            <input type="text" placeholder="North" class="input-field" id="northInput">
-            <input type="text" placeholder="South" class="input-field" id="southInput">
-            <input type="text" placeholder="East" class="input-field" id="eastInput">
-            <input type="text" placeholder="West" class="input-field" id="westInput">
+            <input type="text" placeholder="North" class="input-field" id="north">
+            <input type="text" placeholder="South" class="input-field" id="south">
+            <input type="text" placeholder="East" class="input-field" id="east">
+            <input type="text" placeholder="West" class="input-field" id="west">
           </td>
           <td>
-            <input type="submit" value="Submit" class="submit-button" onclick="showEarthquakeResults()">
+            <input type="submit" value="Submit" class="submit-button" id="btnRunEarthquakes">
           </td>
         </tr>
         <tr>
@@ -43,20 +44,23 @@
             <input type="text" placeholder="Enter street name" class="input-field" id="streetInput">
           </td>
           <td>
-            <input type="submit" value="Submit" class="submit-button" onclick="showStreetResults()">
+            <input type="submit" value="Submit" class="submit-button" id="btnRunStreetNames">
           </td>
         </tr>
         <tr>
-          <td>Country info</td>
-          <td>
-            Gives you in-depth information about a country from currency to what continent it's on. The parameters for this are just the country/country code.
-          </td>
-          <td>
-            <input type="text" placeholder="Enter country or country code" class="input-field" id="countryInput">
-          </td>
-          <td>
-            <input type="submit" value="Submit" class="submit-button" onclick="showCountryResults()">
-          </td>
+          <td>Weather</td>
+			<td>
+			Retrieves weather information based on coordinates (bounding box).
+		  </td>
+			  <td>
+				<input type="text" placeholder="North" class="input-field" id="northInput">
+				<input type="text" placeholder="South" class="input-field" id="southInput">
+				<input type="text" placeholder="East" class="input-field" id="eastInput">
+				<input type="text" placeholder="West" class="input-field" id="westInput">
+			  </td>
+			  <td>
+				<input type="submit" value="Submit" class="submit-button" id="btnRunWeather">
+			  </td>
         </tr>
 
       </tbody>
@@ -66,6 +70,6 @@
     </div>
   </div>
 
-  <script src="Task.js"></script>
+	<script src="libs/Task.js"></script>
 </body>
 </html>
