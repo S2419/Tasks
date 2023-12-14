@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <title>Sample Table</title>
+  <script src="libs/jquery-3.7.1.min.js"></script>
+  <link rel="stylesheet" href="libs/Task.css">
+</head>
+<body>
+  <div class="container">
+    <table>
+      <thead>
+        <tr>
+          <th>Api name</th>
+          <th>Description</th>
+          <th>Input</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Earthquakes</td>
+          <td>
+            This API shows a list of earthquakes and ranks them in size of magnitude. Parameters :
+			north,south,east,west : coordinates of bounding box.
+          </td>
+          <td>
+            <input type="text" placeholder="North" class="input-field" id="north">
+            <input type="text" placeholder="South" class="input-field" id="south">
+            <input type="text" placeholder="East" class="input-field" id="east">
+            <input type="text" placeholder="West" class="input-field" id="west">
+          </td>
+          <td>
+            <input type="submit" value="Submit" class="submit-button" id="btnRunEarthquakes">
+          </td>
+        </tr>
+        <tr>
+          <td>Streetname Lookup</td>
+          <td>
+            Can search up the street name anywhere in the world by querying it. Parameters are q (query term, URL encoded) which is any location or word beginning.
+          </td>
+          <td>
+            <input type="text" placeholder="Enter street name" class="input-field" id="streetInput">
+          </td>
+          <td>
+            <input type="submit" value="Submit" class="submit-button" id="btnRunStreetNames">
+          </td>
+        </tr>
+        <tr>
+          <td>Weather</td>
+			<td>
+			Retrieves weather information based on coordinates (bounding box).
+		  </td>
+			  <td>
+				<input type="text" placeholder="North" class="input-field" id="northInput">
+				<input type="text" placeholder="South" class="input-field" id="southInput">
+				<input type="text" placeholder="East" class="input-field" id="eastInput">
+				<input type="text" placeholder="West" class="input-field" id="westInput">
+			  </td>
+			  <td>
+				<input type="submit" value="Submit" class="submit-button" id="btnRunWeather">
+			  </td>
+        </tr>
+
+      </tbody>
+    </table>
+
+    <div class="result-box" id="resultBox">
+    </div>
+  </div>
+
+	<script src="libs/Task.js"></script>
+</body>
+</html>
